@@ -11,11 +11,11 @@ export function Banner() {
     <div
       className={cn(
         "w-full px-8 lg:px-24 py-8 min-h-[calc(100vh-92px)]",
-        "flex justify-between items-center gap-8"
+        "flex flex-col-reverse md:flex-row justify-center md:justify-between items-center gap-8"
       )}
     >
       <div className="w-full max-w-screen-sm flex flex-col gap-2">
-        <h1 className="text-5xl font-bold leading-[54px]">
+        <h1 className="text-3xl md:text-5xl font-bold leading-8 md:leading-[54px]">
           Olá, sou Johnny Ferreira. Desenvolvedor de software.
         </h1>
         <p className="text-lg">Desenvolvimento web e de aplicativos móveis.</p>
@@ -27,7 +27,7 @@ export function Banner() {
             <FontAwesomeIcon icon={faGithub} size="3x" />
           </Link>
         </div>
-        <Button className="w-max" size="lg">
+        <Button className="w-full md:w-max" size="lg">
           <FontAwesomeIcon icon={faArrowDown} className="mr-2" /> Entre em
           contato
         </Button>
@@ -37,6 +37,7 @@ export function Banner() {
         alt="Johnny Ferreira"
         width={440}
         height={440}
+        className="w-full max-w-[220px] md:max-w-[440px]"
       />
     </div>
   );
