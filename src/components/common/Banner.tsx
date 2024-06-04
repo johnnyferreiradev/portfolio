@@ -10,7 +10,7 @@ export function Banner() {
   return (
     <div
       className={cn(
-        "w-full px-8 lg:px-24 py-8 min-h-[calc(100vh-92px)]",
+        "w-full px-8 lg:px-24 py-8 min-h-[calc(100vh-108px)]",
         "flex flex-col-reverse md:flex-row justify-center md:justify-between items-center gap-8"
       )}
     >
@@ -18,7 +18,9 @@ export function Banner() {
         <h1 className="text-3xl md:text-5xl font-bold leading-8 md:leading-[54px]">
           Olá, sou Johnny Ferreira. Desenvolvedor de software.
         </h1>
-        <p className="text-lg">Desenvolvimento web e de aplicativos móveis.</p>
+        <h2 className="text-lg">
+          Desenvolvimento web e de aplicativos móveis.
+        </h2>
         <div className="my-8 flex items-center gap-3">
           <Link href="#">
             <FontAwesomeIcon icon={faLinkedin} size="3x" />
