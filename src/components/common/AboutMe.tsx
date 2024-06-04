@@ -7,7 +7,7 @@ export function AboutMe() {
   const numberOfXPYears = currentYear - START_YEAR;
 
   return (
-    <div className="w-full flex flex-col lg:flex-row justify-between gap-8 mb-16">
+    <div className="w-full flex flex-col lg:flex-row justify-between gap-8 mb-24">
       <AboutMeItem
         imageAlt="rocket"
         imageSrc="/rocket.svg"
