@@ -1,5 +1,6 @@
 import { AboutMe } from "@/components/common/AboutMe";
 import { Banner } from "@/components/common/Banner";
+import { ContactMe } from "@/components/common/ContactMe";
 import { Header } from "@/components/common/Header";
 import { Portfolio } from "@/components/common/Portfolio";
 import { Section } from "@/components/common/Section";
@@ -9,7 +10,7 @@ export default function Home() {
   return (
     <main className="w-full flex flex-col items-center">
       <Header />
-      <div className="w-full max-w-screen-xl">
+      <div className="w-full">
         <Banner />
         <Section title="Sobre mim">
           <AboutMe />
@@ -26,6 +27,9 @@ export default function Home() {
           }
         >
           <Portfolio />
+        </Section>
+        <Section className="bg-slate-950">
+          <ContactMe />
         </Section>
       </div>
     </main>

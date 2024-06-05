@@ -8,39 +8,41 @@ import Image from "next/image";
 
 export function Banner() {
   return (
-    <div
-      className={cn(
-        "w-full px-8 lg:px-24 py-8 min-h-[calc(100vh-108px)]",
-        "flex flex-col-reverse md:flex-row justify-center md:justify-between items-center gap-8"
-      )}
-    >
-      <div className="w-full max-w-screen-sm flex flex-col gap-2">
-        <h1 className="text-3xl md:text-5xl font-bold leading-8 md:leading-[54px]">
-          Olá, sou Johnny Ferreira. Desenvolvedor de software.
-        </h1>
-        <h2 className="text-lg">
-          Desenvolvimento web e de aplicativos móveis.
-        </h2>
-        <div className="my-8 flex items-center gap-3">
-          <Link href="#">
-            <FontAwesomeIcon icon={faLinkedin} size="3x" />
-          </Link>
-          <Link href="#">
-            <FontAwesomeIcon icon={faGithub} size="3x" />
-          </Link>
+    <div className="w-full flex justify-center">
+      <div
+        className={cn(
+          "w-full max-w-screen-xl min-h-[calc(100vh-108px)] px-8 lg:px-24 py-8 overflow-x-hidden",
+          "flex flex-col-reverse md:flex-row justify-center md:justify-between items-center gap-8"
+        )}
+      >
+        <div className="w-full max-w-screen-sm flex flex-col gap-2">
+          <h1 className="text-3xl md:text-5xl font-bold leading-8 md:leading-[54px]">
+            Olá, sou Johnny Ferreira. Desenvolvedor de software.
+          </h1>
+          <h2 className="text-lg">
+            Desenvolvimento web e de aplicativos móveis.
+          </h2>
+          <div className="my-8 flex items-center gap-3">
+            <Link href="#">
+              <FontAwesomeIcon icon={faLinkedin} size="3x" />
+            </Link>
+            <Link href="#">
+              <FontAwesomeIcon icon={faGithub} size="3x" />
+            </Link>
+          </div>
+          <Button className="w-full md:w-max" size="lg">
+            <FontAwesomeIcon icon={faArrowDown} className="mr-2" /> Entre em
+            contato
+          </Button>
         </div>
-        <Button className="w-full md:w-max" size="lg">
-          <FontAwesomeIcon icon={faArrowDown} className="mr-2" /> Entre em
-          contato
-        </Button>
+        <Image
+          src="/welcome-illustration.svg"
+          alt="Johnny Ferreira"
+          width={440}
+          height={440}
+          className="w-full max-w-[220px] md:max-w-[440px]"
+        />
       </div>
-      <Image
-        src="/welcome-illustration.svg"
-        alt="Johnny Ferreira"
-        width={440}
-        height={440}
-        className="w-full max-w-[220px] md:max-w-[440px]"
-      />
     </div>
   );
 }
