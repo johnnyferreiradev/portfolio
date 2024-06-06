@@ -1,3 +1,4 @@
+import { INSTAGRAM_URL, LINKEDIN_URL } from "@/settings";
 import {
   faLinkedin,
   faSquareInstagram,
@@ -26,10 +27,10 @@ export function ContactMe() {
           se preferir, você também pode me encontrar nas redes sociais:
         </p>
         <div className="flex gap-4 items-center">
-          <Link href="#">
+          <Link href={LINKEDIN_URL || ""} target="_blank">
             <FontAwesomeIcon icon={faLinkedin} size="3x" />
           </Link>
-          <Link href="#">
+          <Link href={INSTAGRAM_URL || ""} target="_blank">
             <FontAwesomeIcon icon={faSquareInstagram} size="3x" />
           </Link>
         </div>

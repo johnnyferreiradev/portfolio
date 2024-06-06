@@ -6,6 +6,10 @@ import { Header } from "@/components/common/Header";
 import { Portfolio } from "@/components/common/Portfolio";
 import { Section } from "@/components/common/Section";
 import { Button } from "@/components/ui/button";
+import { ALL_PROJECTS_URL } from "@/settings";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -21,9 +25,13 @@ export default function Home() {
           actions={
             <Button
               variant="link"
-              className="font-semibold text-base text-indigo-600"
+              asChild
+              className="font-medium text-indigo-600 text-center md:text-start px-0 text-base"
             >
-              Ver todos
+              <Link href={ALL_PROJECTS_URL || ""} target="_blank">
+                <span className="mr-2">Ver todos</span>
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+              </Link>
             </Button>
           }
         >

@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
+import { GITHUB_URL, INSTAGRAM_URL, LINKEDIN_URL } from "@/settings";
 
 export function Footer() {
   return (
@@ -20,13 +21,13 @@ export function Footer() {
         <div className="flex flex-col justify-between items-center md:items-start flex-1 gap-4">
           <h5 className="text-lg font-semibold">Johnny Ferreira</h5>
           <div className="flex items-center gap-4">
-            <Link href="#">
+            <Link href={LINKEDIN_URL || ""} target="_blank">
               <FontAwesomeIcon icon={faLinkedin} size="xl" />
             </Link>
-            <Link href="#">
+            <Link href={GITHUB_URL || ""} target="_blank">
               <FontAwesomeIcon icon={faGithub} size="xl" />
             </Link>
-            <Link href="#">
+            <Link href={INSTAGRAM_URL || ""} target="_blank">
               <FontAwesomeIcon icon={faInstagram} size="xl" />
             </Link>
           </div>

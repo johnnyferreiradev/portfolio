@@ -3,18 +3,28 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
+import { Fragment } from "react";
+import { Button } from "../ui/button";
 
-export function Project({
-  imageAlt,
-  imageSrc,
-  title,
-  text,
-}: {
+interface ProjectProps {
   imageAlt: string;
   imageSrc: string;
   title: string;
   text: string;
-}) {
+  techs: string[];
+  accessTips: string | null;
+  url: string;
+}
+
+export function Project({
+  accessTips,
+  imageAlt,
+  imageSrc,
+  title,
+  text,
+  techs,
+  url,
+}: ProjectProps) {
   return (
     <div
       className={cn(
@@ -30,26 +40,36 @@ export function Project({
           {text}
         </p>
         <div className="text-slate-500 font-medium text-center lg:text-start">
-          <p>Tecnologias:</p>
+          <p className="text-sm mb-1">Tecnologias:</p>
           <div>
-            <span>Tec 1</span> •<span>Tec 1</span> •<span>Tec 1</span>
+            {techs.map((item, index) => (
+              <Fragment key={index}>
+                <span>{item}</span> {index < techs.length - 1 ? "• " : ""}
+              </Fragment>
+            ))}
           </div>
         </div>
-        <Link
-          href="#"
-          className="font-medium text-indigo-600 text-center md:text-start"
+        <Button
+          variant="link"
+          asChild
+          className="font-medium text-indigo-600 text-center md:text-start px-0 text-base"
         >
-          <span>Acessar </span>
-          <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-        </Link>
+          <Link href={url} target="_blank">
+            <span className="mr-2">Acessar</span>
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+          </Link>
+        </Button>
+        {accessTips && <p className="text-xs text-slate-500">{accessTips}</p>}
       </div>
-      <Image
-        src={imageSrc}
-        alt={imageAlt}
-        width={80}
-        height={80}
-        className="w-full max-w-[600px] pt-8 flex-1"
-      />
+      <Link href={url} target="_blank">
+        <Image
+          src={imageSrc}
+          alt={imageAlt}
+          width={80}
+          height={80}
+          className="w-full max-w-[600px] pt-8 flex-1"
+        />
+      </Link>
     </div>
   );
 }
