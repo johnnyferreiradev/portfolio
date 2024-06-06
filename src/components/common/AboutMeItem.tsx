@@ -15,7 +15,7 @@ export function AboutMeItem({
   return (
     <div
       className={cn(
-        "flex flex-col items-center gap-6 flex-1",
+        "flex flex-col items-center gap-6",
         "bg-slate-100 px-4 py-6 md:px-8 md:py-10 rounded-[56px]",
         "text-center"
       )}

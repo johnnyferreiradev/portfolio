@@ -1,3 +1,5 @@
+"use client";
+
 import { INSTAGRAM_URL, LINKEDIN_URL } from "@/settings";
 import {
   faLinkedin,
@@ -5,10 +7,17 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export function ContactMe() {
   return (
-    <div className="text-white flex flex-col gap-12 text-center pb-8 md:pb-16">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5, delay: 0.5 }}
+      className="text-white flex flex-col gap-12 text-center pb-8 md:pb-16"
+    >
       <div className="flex flex-col justify-center items-center gap-12">
         <h2 className="text-2xl md:text-3xl font-bold">Vamos conversar!</h2>
         <p className="mt-2 w-full max-w-screen-sm">
@@ -35,6 +44,6 @@ export function ContactMe() {
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

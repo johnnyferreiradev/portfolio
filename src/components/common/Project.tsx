@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -5,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
 import { Button } from "../ui/button";
+import { motion } from "framer-motion";
 
 interface ProjectProps {
   imageAlt: string;
@@ -26,7 +29,11 @@ export function Project({
   url,
 }: ProjectProps) {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5, delay: 0.5 }}
       className={cn(
         "flex flex-col-reverse lg:flex-row gap-6 justify-between items-center flex-1",
         "bg-slate-100 px-8 py-10 md:p-16 rounded-[56px] overflow-hidden"
@@ -70,6 +77,6 @@ export function Project({
           className="w-full max-w-[600px] pt-8 flex-1"
         />
       </Link>
-    </div>
+    </motion.div>
   );
 }

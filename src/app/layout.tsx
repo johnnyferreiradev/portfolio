@@ -11,7 +11,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Johnny Ferreira",
-  description: "Johnny Ferreira - Software Developer",
+  description:
+    "Johnny Ferreira - Desenvolvedor de software. Desenvolvimento web e de aplicativos móveis.",
 };
 
 export default function RootLayout({
