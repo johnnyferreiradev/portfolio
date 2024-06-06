@@ -15,6 +15,7 @@ export function Banner() {
           "w-full max-w-screen-xl min-h-[calc(100vh-108px)] px-8 lg:px-24 py-8 overflow-x-hidden",
           "flex flex-col-reverse md:flex-row justify-center md:justify-between items-center gap-8"
         )}
+        id="home"
       >
         <div className="w-full max-w-screen-sm flex flex-col gap-2">
           <h1 className="text-3xl md:text-5xl font-bold leading-8 md:leading-[54px]">
@@ -31,9 +32,12 @@ export function Banner() {
               <FontAwesomeIcon icon={faGithub} size="3x" />
             </Link>
           </div>
-          <Button className="w-full md:w-max" size="lg">
-            <FontAwesomeIcon icon={faArrowDown} className="mr-2" /> Entre em
-            contato
+
+          <Button className="w-full md:w-max" size="lg" asChild>
+            <Link href="#contact">
+              <FontAwesomeIcon icon={faArrowDown} className="mr-2" />{" "}
+              <span>Entre em contato</span>
+            </Link>
           </Button>
         </div>
         <Image

@@ -36,22 +36,22 @@ export function Footer() {
           <ul>
             <li>
               <Button asChild variant="link" className="text-base">
-                <Link href="#">Home</Link>
+                <Link href="#home">Home</Link>
               </Button>
             </li>
             <li>
               <Button asChild variant="link" className="text-base">
-                <Link href="#">Sobre mim</Link>
+                <Link href="#about-me">Sobre mim</Link>
               </Button>
             </li>
             <li>
               <Button asChild variant="link" className="text-base">
-                <Link href="#">Portfólio</Link>
+                <Link href="#portfolio">Portfólio</Link>
               </Button>
             </li>
             <li>
               <Button asChild variant="link" className="text-base">
-                <Link href="#">Contato</Link>
+                <Link href="#contact">Contato</Link>
               </Button>
             </li>
           </ul>

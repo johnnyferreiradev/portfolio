@@ -17,10 +17,11 @@ export default function Home() {
       <Header />
       <div className="w-full">
         <Banner />
-        <Section title="Sobre mim">
+        <Section title="Sobre mim" id="about-me">
           <AboutMe />
         </Section>
         <Section
+          id="portfolio"
           title="Portfólio"
           actions={
             <Button
@@ -37,7 +38,7 @@ export default function Home() {
         >
           <Portfolio />
         </Section>
-        <Section className="bg-slate-950">
+        <Section className="bg-slate-950" id="contact">
           <ContactMe />
         </Section>
         <Footer />
