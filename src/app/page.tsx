@@ -1,6 +1,7 @@
 import { AboutMe } from "@/components/common/AboutMe";
 import { Banner } from "@/components/common/Banner";
 import { ContactMe } from "@/components/common/ContactMe";
+import { Footer } from "@/components/common/Footer";
 import { Header } from "@/components/common/Header";
 import { Portfolio } from "@/components/common/Portfolio";
 import { Section } from "@/components/common/Section";
@@ -31,6 +32,7 @@ export default function Home() {
         <Section className="bg-slate-950">
           <ContactMe />
         </Section>
+        <Footer />
       </div>
     </main>
   );

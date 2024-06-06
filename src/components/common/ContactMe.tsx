@@ -1,4 +1,7 @@
-import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faLinkedin,
+  faSquareInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
@@ -27,7 +30,7 @@ export function ContactMe() {
             <FontAwesomeIcon icon={faLinkedin} size="3x" />
           </Link>
           <Link href="#">
-            <FontAwesomeIcon icon={faInstagram} size="3x" />
+            <FontAwesomeIcon icon={faSquareInstagram} size="3x" />
           </Link>
         </div>
       </div>

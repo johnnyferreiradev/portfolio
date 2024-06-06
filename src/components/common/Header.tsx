@@ -25,7 +25,7 @@ export function Header() {
         </li>
       </ul>
       <Button size="lg" className="hidden md:inline-flex">
-        Contact-me
+        Vamos conversar
       </Button>
 
       <Sheet>
