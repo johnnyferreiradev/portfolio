@@ -13,6 +13,25 @@ export const metadata: Metadata = {
   title: "Johnny Ferreira",
   description:
     "Johnny Ferreira - Desenvolvedor de software. Desenvolvimento web e de aplicativos móveis.",
+  robots: "index, follow",
+  keywords: [
+    "desenvolvedor de software",
+    "desenvolvimento web",
+    "desenvolvimento de aplicativos móveis",
+    "NextJs",
+    "Tailwind CSS",
+    "Zustand",
+    "NestJs",
+    "Postgres",
+    "React Native",
+    "React",
+    "frontend developer",
+    "desenvolvedor frontend",
+    "programador",
+    "programador frontend",
+    "programador de aplicativos",
+    "programador de sites",
+  ],
 };
 
 export default function RootLayout({

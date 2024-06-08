@@ -33,7 +33,7 @@ export function Project({
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.5, delay: 0.5 }}
+      transition={{ duration: 1 }}
       className={cn(
         "flex flex-col-reverse lg:flex-row gap-6 justify-between items-center flex-1",
         "bg-slate-100 px-8 py-10 md:p-16 rounded-[56px] overflow-hidden"

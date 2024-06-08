@@ -53,7 +53,7 @@ export function AboutMe() {
           imageAlt="globe"
           imageSrc="/globe.svg"
           title="Experiência Internacional"
-          text="Já participei de projetos internacionais, colaborando com equipes diversificadas e enfrentando desafios globais."
+          text="Já participei de projetos internacionais, colaborando com equipes diversificadas e enfrentando diversos desafios."
         />
       </motion.div>
     </div>

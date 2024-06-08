@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://johnnyferreira.com.br
+
+# Sitemaps
+Sitemap: https://johnnyferreira.com.br/sitemap.xml
