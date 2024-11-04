@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import { Providers } from "./providers";
 
 config.autoAddCss = false;
 
@@ -41,7 +42,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="w-full">
-      <body className={cn(inter.className, "w-full")}>{children}</body>
+      <body className={cn(inter.className, "w-full")}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
