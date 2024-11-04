@@ -3,8 +3,10 @@ import { Button } from "../ui/button";
 
 export default function SongsHeader({
   playDisabled,
+  onPlay,
 }: {
   playDisabled: boolean;
+  onPlay: () => void;
 }) {
   return (
     <div className="w-full max-w-screen-sm flex items-center justify-between mb-4">
@@ -13,6 +15,7 @@ export default function SongsHeader({
         size="sm"
         className="bg-green-500 hover:bg-green-600"
         disabled={playDisabled}
+        onClick={onPlay}
       >
         <Play />
         <span className="text-base ml-2">Iniciar</span>

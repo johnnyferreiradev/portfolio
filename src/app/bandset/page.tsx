@@ -2,6 +2,7 @@
 
 import EditSong from "@/components/bandset/EditSong";
 import NewSong from "@/components/bandset/NewSong";
+import { PlayDialog } from "@/components/bandset/PlayDialog";
 import Song from "@/components/bandset/Song";
 import SongsHeader from "@/components/bandset/SongsHeader";
 import { useSongList } from "@/hooks/useSongList";
@@ -32,9 +33,14 @@ export default function BandSet() {
     deleteSong(id);
   };
 
+  const [isPlaying, setIsPlaying] = useState(false);
+
   return (
     <div className="w-full flex flex-col items-center p-6 py-16">
-      <SongsHeader playDisabled={songs?.length === 0} />
+      <SongsHeader
+        playDisabled={songs?.length === 0}
+        onPlay={() => setIsPlaying(true)}
+      />
       <div className="w-full max-w-screen-sm flex flex-col gap-4">
         {songs?.map((item) => (
           <Song
@@ -63,6 +69,17 @@ export default function BandSet() {
 
       {!loadingSongs && (
         <NewSong isOpen={newIsOpen} changeIsOpen={handleChangeNewIsOpen} />
+      )}
+
+      {!loadingSongs && songs && songs?.length > 0 && isPlaying && (
+        <PlayDialog
+          songs={songs.map((item) => ({
+            note: item.note,
+            description: item.description || "",
+            title: item.title,
+          }))}
+          onClose={() => setIsPlaying(false)}
+        />
       )}
     </div>
   );
