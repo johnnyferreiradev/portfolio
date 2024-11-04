@@ -8,8 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "postbuild": "next-sitemap",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate && (npm run migrate:prod || true)"
   },
+  "migrate:prod": "if [ \"$NODE_ENV\" = \"production\" ]; then prisma migrate deploy; fi",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
