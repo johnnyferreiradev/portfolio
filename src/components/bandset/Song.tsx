@@ -33,7 +33,11 @@ export default function Song({
       </div>
       <div className="flex items-center gap-2">
         <Button
-          onClick={() => onDelete(data.id)}
+          onClick={() => {
+            if (window.confirm("Tem certeza que deseja remover?")) {
+              onDelete(data.id);
+            }
+          }}
           variant="outline"
           size="icon"
           disabled={actionsDisabled}
@@ -41,7 +45,9 @@ export default function Song({
           <Trash />
         </Button>
         <Button
-          onClick={() => onEdit(data)}
+          onClick={() => {
+            onEdit(data);
+          }}
           variant="outline"
           size="icon"
           disabled={actionsDisabled}
